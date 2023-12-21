@@ -90,19 +90,19 @@ const content ='I love Tech!'
 
 // WRITING FILE USING ASYNC AND AWAIT
 
-const writingAndReadingInFile = async ()=>{
-   try{
-    await fsPromise.writeFile(textFile, content)
-    await fsPromise.appendFile(textFile, '\n This is file appender')
+// const writingAndReadingInFile = async ()=>{
+//    try{
+//     await fsPromise.writeFile(textFile, content)
+//     await fsPromise.appendFile(textFile, '\n This is file appender')
 
-    // rename file
-    await fsPromise.rename(textFile, path.join(__dirname, 'files', 'newText.txt'))
-    const data = await fsPromise.readFile(path.join(__dirname, 'files', 'newText.txt'), 'utf-8')
+//     // rename file
+//     await fsPromise.rename(textFile, path.join(__dirname, 'files', 'newText.txt'))
+//     const data = await fsPromise.readFile(path.join(__dirname, 'files', 'newText.txt'), 'utf-8')
 
-    // const data = await fsPromise.readFile(textFile, 'utf-8')
-    console.log(data)
-   } catch (err){
-    console.log(err)
-   }
-}
-writingAndReadingInFile()
+//     // const data = await fsPromise.readFile(textFile, 'utf-8')
+//     console.log(data)
+//    } catch (err){
+//     console.log(err)
+//    }
+// }
+// writingAndReadingInFile()
